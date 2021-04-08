@@ -45,17 +45,14 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 //ctx.beginPath();
 //ctx.arc(95, 50, 40, 0, 2 * Math.PI);
 //ctx.stroke();
- function draw() {
-      var canvas = document.getElementById('canvas');
-      if (canvas.getContext) {
-        var ctx = canvas.getContext('2d');
 
-        ctx.fillStyle = 'rgb(200, 0, 0)';
-        ctx.fillRect(10, 10, 50, 50);
+// code for a line with in the canvas
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(0, 0);
+ctx.lineTo(200, 100);
+ctx.stroke();
 
-        //ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
-        //ctx.fillRect(30, 30, 50, 50);
-} //this function draws a rectangle 
 	
 </script>
 
@@ -81,8 +78,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 }
 </style>
 
-<body onload="draw();">
-   	<canvas id="canvas" width="150" height="150"></canvas> <!-- this function onlaods the triangle-->
+<body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
 </div>
@@ -93,6 +89,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 	<!--<a class="w3-btn w3-red" onclick="2d();"> Draw Rectangle </a> <!--code for rectangle onclick button-->
 	
+	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"> <!--w3 css method-->
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
