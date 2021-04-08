@@ -74,9 +74,10 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<!--code for canvas-->
 	<canvas id="myCanvas" width="300" height="225" style="border:1px solid black;"></canvas> 
 	<br> <button onclick="drawRectangle()">Draw Rectangle</button>
+	<br> <button onclick="clearCanvas()">Clear Canvas</button>
 	
-	<!--code for rectangle within the canvas-->
 	<script>
+	//code for rectangle within the canvas
 	function drawRectangle() {
 		var c = document.getElementById("myCanvas");
 		var ctx = c.getContext("2d");
@@ -84,6 +85,9 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		ctx.rect(20, 20, 150, 100);
 		ctx.stroke();
 		}
+	//code to clear canvas
+	function clearCanvas() {
+		context.clearRect(0, 0, canvas.width, canvas.height);
 	</script>
 	
 	
