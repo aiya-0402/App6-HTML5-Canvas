@@ -62,11 +62,18 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		ctx.fillText("AIYA",10,50);
 	}
 //code to onload image onto canvas
-	window.onload = function printImage() {
+	function printImage() {
    	var c = document.getElementById("myCanvas");
     	var ctx = canvas.getContext("2d");
-   	var img = document.getElementById("city");
-  	ctx.drawImage(img, 10, 10);
+	var city = printImage();
+	city.src = "https://robbreport.com/wp-content/uploads/2019/01/austin_1104548120.jpg?w=1000"
+	city.onload = function(){
+		context.drawImage(city, 10,10);
+		}
+		
+   	//var img = document.getElementById("city");
+  	//ctx.drawImage(img, 10, 10);
+	//printImage
 	}
 </script>
 
@@ -106,8 +113,9 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<br> <button onclick="printImage()">Print City</button>
 	<br> <button onclick="clearCanvas()">Clear Canvas</button>
 	
-	<!-- image source for printImage-->
+	<!-- image source for printImage
 	<img id="city" width="300" height="225" src="https://robbreport.com/wp-content/uploads/2019/01/austin_1104548120.jpg?w=1000" alt="Austin City">
+	-->
 	
 	
 
