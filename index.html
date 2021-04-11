@@ -39,6 +39,19 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
+//code for rectangle within the canvas
+	function drawRectangle() {
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+		ctx.beginPath();
+		ctx.rect(20, 20, 150, 100);
+		ctx.stroke();
+		}
+	
+//code to clear canvas, this just overides the first step and now the rectangle doesnt show up
+	function clearCanvas() {
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		}
 	
 </script>
 
@@ -76,19 +89,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<br> <button onclick="drawRectangle()">Draw Rectangle</button>
 	<br> <button onclick="clearCanvas()">Clear Canvas</button>
 	
-	<script>
-	//code for rectangle within the canvas
-	function drawRectangle() {
-		var c = document.getElementById("myCanvas");
-		var ctx = c.getContext("2d");
-		ctx.beginPath();
-		ctx.rect(20, 20, 150, 100);
-		ctx.stroke();
-		}
-	//code to clear canvas, this just overides the first step and now the rectangle doesnt show up
-	function clearCanvas() {
-		context.clearRect(0, 0, canvas.width, canvas.height);
-	</script>
+	
+	
 	
 	
 
