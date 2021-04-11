@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-The goal of the code is to take a picture, display the picture, and do image analysis on the picture.
+The goal of the code is to take create a canvas, draw a a rectangle, print my name, and an image within that canvas, as well as create a function to clear the canvas.
  
 Known Issues:
 none so far
@@ -43,14 +43,14 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	function drawRectangle() {
 		var c = document.getElementById("myCanvas");
 		var ctx = c.getContext("2d");
-		ctx.beginPath();
-		ctx.rect(20, 20, 150, 100);
-		ctx.stroke();
+		//ctx.beginPath();
+		//ctx.rect(20, 20, 150, 100);
+		//ctx.stroke();
+		ctx.fillRect(20,20,150,100);
 		}
 	
-//code to clear canvas, is not working
+//code to clear canvas
 	function clearCanvas() {
-		//context.clearRect(0, 0, myCanvas.width, myCanvas.height);
 		var c_canvas = document.getElementById("myCanvas");
 		c_canvas.width = c_canvas.width;
 	}
@@ -58,7 +58,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	function printName() {
 		var c = document.getElementById("myCanvas");
 		var ctx = c.getContext("2d");
-		ctx.font = "30px Arial";
+		ctx.font = "30px Arial"; //font and size of text
 		ctx.fillText("AIYA",10,50);
 	}
 //code to onload image onto canvas
@@ -66,9 +66,9 @@ console.log("This file last modified " + docMod); // generates message in javaSc
    	var canvas = document.getElementById("myCanvas");
     	var context = canvas.getContext("2d");
 	var city = new Image();
-	city.src = "https://robbreport.com/wp-content/uploads/2019/01/austin_1104548120.jpg?w=1000"
+	city.src = "https://robbreport.com/wp-content/uploads/2019/01/austin_1104548120.jpg?w=1000" //URL for image src
 	city.onload = function(){
-		context.drawImage(city, 0,0,300,168);
+		context.drawImage(city, 0,0,300,168); //dimensions of img
 		}
 	}
 </script>
